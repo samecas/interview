@@ -40,7 +40,7 @@ diff -u /tmp/fstab.orig /tmp/fstab.2022-04-23  | wc -l
 - **sed** binary itself 
 - **-i.\`date +"%Y-%m-%d"`** - option for edititing file in combination with "date" command for naming backup file with current date stamp
 - **'/nfs/** - search patern. We want to proceed lines which contains "nfs" patern
-- **s/^abc/xyz/I'** - here we are searching for lines which start with "abc" (regex ^) and replacing them with xyz 
+- **s/^abc/xyz/I'** - here we are searching case-insensitively (option I) for lines which starts with "abc" (regex ^) and replacing them with xyz 
 - **fstab** - actual filename we are changing
 
 ## Files included on this repo
