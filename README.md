@@ -17,17 +17,17 @@ sed -i.`date +"%Y-%m-%d"` '/nfs/ s/^abc/xyz/I' fstab
 Gives us result: 
 
 ```bash
---- fstab	2022-04-23 15:42:14.196522167 +0300
-+++ fstab.2022-04-23	2022-04-23 15:41:43.943551574 +0300
+--- fstab.2022-04-23	2022-04-23 16:19:57.042359130 +0300
++++ fstab	2022-04-23 16:29:29.104831600 +0300
 @@ -6,6 +6,6 @@
  /dev/vg/opt                                 /opt        ext4    data=ordered                0 2
  /dev/vg/home                                /home       xfs     noatime                     0 0
  UUID=3c00c10f-ce64-430c-9a1a-db1abc0bba82   /boot       ext4    data=ordered                0 2
--xyz123.example.com:/shareabc                /mnt/abc    nfs     _netdev,bg,tcp,hard,intr    0 0
-+abc123.example.com:/shareabc                /mnt/abc    nfs     _netdev,bg,tcp,hard,intr    0 0
+-abc123.example.com:/shareabc                /mnt/abc    nfs     _netdev,bg,tcp,hard,intr    0 0
++xyz123.example.com:/shareabc                /mnt/abc    nfs     _netdev,bg,tcp,hard,intr    0 0
  123abc.example.com:/share1                  /mnt/1      nfs     _netdev,bg,tcp,hard,intr    0 0
--xyz123.example.com:/share2                  /mnt/2      nfs     _netdev,bg,tcp,hard,intr    0 0
-+ABC123.example.com:/share2                  /mnt/2      nfs     _netdev,bg,tcp,hard,intr    0 0
+-ABC123.example.com:/share2                  /mnt/2      nfs     _netdev,bg,tcp,hard,intr    0 0
++xyz123.example.com:/share2                  /mnt/2      nfs     _netdev,bg,tcp,hard,intr    0 0
 ```
 
 make sure backup is ok :
