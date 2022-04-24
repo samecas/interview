@@ -1,0 +1,9 @@
+version: "3.4"
+
+services:
+  commits-check:
+    image: gh-app:latest
+    container_name: commits
+    restart: always
+    network_mode: bridge
+    restart: always
