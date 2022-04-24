@@ -84,6 +84,8 @@ ENV MAIL_TO=recipient@example.com
 ...
 ```
 
+**Running script in containers**
+
 Then build the image:
 ```
 # docker build -t gh-app .
